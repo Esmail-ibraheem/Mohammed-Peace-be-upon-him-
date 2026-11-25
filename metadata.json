@@ -1,0 +1,6 @@
+{
+  "name": "The Prophetic Journey",
+  "description": "An interactive digital museum and source-verified historical encyclopedia of the Seerah of Prophet Muhammad ﷺ in English and Arabic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

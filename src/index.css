@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --color-emerald-deep: #101B17;
+  --color-emerald-surface: #172721;
+  --color-gold-antique: #C5A46D;
+  --color-gold-muted: #9E7E49;
+  --color-parchment: #F2E8D5;
+  --color-ivory: #F9F6EF;
+  --color-charcoal: #272521;
+  --color-ink-muted: #5E594F;
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-arabic-display: "Amiri", Georgia, serif;
+  --font-arabic-sans: "Noto Naskh Arabic", Tahoma, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #F9F6EF;
+    color: #272521;
+    font-family: var(--font-sans);
+  }
+
+  html[dir="rtl"] {
+    font-family: var(--font-arabic-sans);
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  html[dir="rtl"] h1,
+  html[dir="rtl"] h2,
+  html[dir="rtl"] h3,
+  html[dir="rtl"] .font-editorial {
+    font-family: var(--font-arabic-display);
+  }
+
+  .font-arabic {
+    font-family: var(--font-arabic-display);
+    line-height: 1.9;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Subtle archival scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F2E8D5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C5A46D;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9E7E49;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
